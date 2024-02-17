@@ -7,7 +7,7 @@ import "./style.css";
 
 import CountProd from "../elements/countProd/index";
 import FooterHeader from "./footerheader";
-import label from "./img/logo.svg";
+import label from "./img/Group 223.svg";
 import search from "./img/search.svg";
 import compare from "./img/compare.svg";
 import heart from "./img/heart.svg";

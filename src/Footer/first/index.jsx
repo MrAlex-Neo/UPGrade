@@ -4,7 +4,7 @@ import FooterSecond from "../second";
 import phoneIcon from "../img/phoneIcon.svg";
 import locationIcon from "../img/locationIcon.svg";
 import clockIcon from "../img/clockIcon.svg";
-import label from "../../Header/img/logo.svg";
+import label from "../../Header/img/Group 223.svg";
 
 //accordeon
 import accordCompany from "../img/accordeon/accordCompany.svg";
