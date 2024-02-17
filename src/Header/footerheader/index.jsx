@@ -53,7 +53,12 @@ const FooterHeader = () => {
       <div className="footerForHeader">
         <div className="mainChildForHeadFooter">
           <img src={hamburger} alt="Hamburger" />
-          <p>Каталог</p>
+          <Link
+            style={{ textDecoration: "none" }}
+            to={`/category/Игровые сборки`}
+          >
+            <p>Каталог</p>
+          </Link>
         </div>
         <div
           className={`mainChildForHeadFooter arrow ${
@@ -75,7 +80,10 @@ const FooterHeader = () => {
             className={`categoryList ${isCategoryListVisible ? "" : "none"}`}
           >
             {myArray.map((item, index) => (
-              <Link style={{ textDecoration: "none" }} to={`/category/${item.name}`}>
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`/category/${item.name}`}
+              >
                 <div key={index} className="categoryName">
                   <p>{item.name}</p>
                   <hr />
