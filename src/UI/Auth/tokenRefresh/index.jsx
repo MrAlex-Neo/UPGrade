@@ -13,20 +13,20 @@ const TokenRefresh = () => {
 
         if (token && refresh) {
           const values = {
-            refresh: refresh
-          }
+            refresh: refresh,
+          };
           const data = await dispatch(fetchTokenRefresh(values));
-          console.log(data)
+          console.log(data);
           if (!data || !data.payload) {
             return alert("failedLog");
           }
 
-          if ('access' in data.payload) {
-            localStorage.setItem('token', data.payload.access);
+          if ("access" in data.payload) {
+            localStorage.setItem("token", data.payload.access);
           }
 
-          if ('refresh' in data.payload) {
-            localStorage.setItem('refresh', data.payload.refresh);
+          if ("refresh" in data.payload) {
+            localStorage.setItem("refresh", data.payload.refresh);
           }
 
           console.log("Refreshing token...");
@@ -35,17 +35,13 @@ const TokenRefresh = () => {
         console.error("Error refreshing token:", error);
       }
     };
-
     // Вызываем refreshToken при монтировании компонента
     refreshToken();
-
     // Устанавливаем интервал на 15 минут (15 * 60 * 1000 миллисекунд)
     const intervalId = setInterval(refreshToken, 15 * 60 * 1000);
-
     // Очистка интервала при размонтировании компонента
     return () => clearInterval(intervalId);
   }, [dispatch]);
-
   return null;
 };
 

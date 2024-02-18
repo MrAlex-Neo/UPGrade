@@ -51,15 +51,15 @@ const FooterHeader = () => {
   return (
     <div className={`${visible ? "visible" : "hiddenFooter"}`}>
       <div className="footerForHeader">
-        <div className="mainChildForHeadFooter">
-          <img src={hamburger} alt="Hamburger" />
-          <Link
-            style={{ textDecoration: "none" }}
-            to={`/category/Игровые сборки`}
-          >
+        <Link
+          style={{ textDecoration: "none" }}
+          to={`/category/Игровые сборки`}
+        >
+          <div className="mainChildForHeadFooter">
+            <img src={hamburger} alt="Hamburger" />
             <p>Каталог</p>
-          </Link>
-        </div>
+          </div>
+        </Link>
         <div
           className={`mainChildForHeadFooter arrow ${
             isCategoryListVisible ? "rotate" : ""
